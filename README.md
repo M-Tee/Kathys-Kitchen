@@ -1,5 +1,8 @@
 # kathyskitchen
 
+![Landing Page](src/assets/kitchen-website-image.jpg) 
+
+
 ## Project setup
 ```
 npm install
