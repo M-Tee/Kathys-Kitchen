@@ -1,9 +1,9 @@
 <template>
-  <div class="home">
+   <div class="home">
     <h1 class="brandName">Kathy's Kitchen</h1>
     <p class="catchphrase">A little slice of Heaven</p>
-    <Button class="menuBtn">Today's Menu</Button>
-  </div>
+    <Button class="menuBtn">Today's Menu </Button>
+</div>
 </template>
 
 <style scoped>
@@ -24,7 +24,7 @@
     line-height: 42px;
   }
   .menuBtn {
-    margin-top: 20px;
+    margin: 30px 0 100px;
     font-size: 1.8vw;
   }
 
@@ -59,5 +59,6 @@ export default {
   components: {
     Button,
   },
+  
 };
 </script>
