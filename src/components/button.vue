@@ -1,5 +1,6 @@
 <template>
-  <button class="btn">Today's Menu
+  <button class="btn">
+    <slot></slot>
   </button>
 </template>
 
