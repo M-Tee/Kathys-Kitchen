@@ -1,3 +1,4 @@
+
 <template>
   <div id="app">
     <div class="backgroundImg">
@@ -9,24 +10,28 @@
         <!-- <router-link to="/about">About</router-link> -->
       </div>
       <router-view />
+      <Home> </Home>
     </div>
-
-    <div class="menu">
-      <h2 class="heading">Menu</h2>
-      <div class="menuNav">
-        <a href=""> Chef's Special</a>
-        <a href=""> Main Course</a>
-        <a href=""> Cake dessert</a>
-      </div>
-      <div class="menuContent">
-
-      </div>
-    </div>
+    <Menu></Menu>
   </div>
 </template>
 
+<script>
+import Home from "./components/Home";
+import Menu from "./components/menu";
+
+export default {
+  name: "app",
+  components: {
+    Home,
+    Menu,
+  },
+  
+};
+</script>
+
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Tillana:wght@800&family=Work+Sans:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tillana:wght@600;800&family=Work+Sans:wght@400;500;600&display=swap");
 
 * {
   padding: 0;
@@ -39,7 +44,7 @@
   -moz-osx-font-smoothing: grayscale;
   /* text-align: center; */
   color: rgba(0, 0, 0, 0.7);
-  background: #f1f1f1;
+  background: #f1f6f7;
 }
 
 .backgroundImg {
@@ -78,37 +83,6 @@
 #nav a.router-link-exact-active {
   /* color: #D36200; */
 }
-
-
-/* Menu Section */
-
-.menu{
-  text-align: center;
-  padding: 30px;
-}
-.heading{
-  margin: 0 0 30px;
- font-family: "Tillana", cursive;
- font-size: 2.5vw;
- color: #d36200;
-}
-
-.menuNav a{
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.7);
-  margin: 0 30px;
-  letter-spacing: 0.2em;
-   font-size: 1.4vw;
-
-}
-
-.menuNav a:hover{
-  color: #d36200;
-  text-decoration-line: underline;
-  text-underline-offset: 1em
-  
-}
-
 
 /* Media Queries */
 @media only screen and (max-width: 768px) {
