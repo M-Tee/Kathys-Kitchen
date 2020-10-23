@@ -18,7 +18,7 @@
 
 <script>
 import Home from "./components/Home";
-import Menu from "./components/menu";
+import Menu from "./components/Menu";
 
 export default {
   name: "app",
@@ -26,6 +26,7 @@ export default {
     Home,
     Menu,
   },
+  
   
 };
 </script>
