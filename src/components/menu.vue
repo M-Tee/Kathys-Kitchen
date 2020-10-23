@@ -1,11 +1,10 @@
 <template>
   <div class="menu">
-    <tabs>
-      
-      <tab name="Chef's Special" :selected="true">
+    <tabs :menu-sections="menuSections" />
+    <router-view />
+      <!-- 
+        <tab name="Chef's Special" :selected="true">
         <div class="menuContent">
-         
-          
           <div class="card">
             <img src="../assets/Image1(1)chef'sSpecial.png" alt="">
             <div class="details">
@@ -31,9 +30,56 @@
         </div>
       </tab>
 
-    </tabs>
+    </tabs> -->
   </div>
 </template>
+
+<script>
+import tabs from "./tabs";
+// import tab from "./tab";
+
+export default {
+  name: "menu",
+  components: {
+    tabs,
+    // tab,
+  },
+  data() {
+    return {
+      menuSections: [
+        {
+          name: 'Chef Specials',
+          route: 'menu.specials'
+        },
+        {
+          name: 'Main Courses',
+          route: 'menu.mainCourse'
+        },
+        {
+          name: 'Cake Desserts',
+          route: 'menu.cakeDesserts'
+        }
+      ],
+      Specials: [
+        {
+          id: 1,
+          phrase: "Set the mood...",
+          name: "Chocholate Cake",
+          description:
+            "Mini lemony pancakes with cheese, swis andblossoms garnish"
+        },
+        {
+          id: 2,
+          phrase: "Set the mood...",
+          name: "Chocholate Cake",
+          description:
+            "Mini lemony pancakes with cheese, swis andblossoms garnish"
+        },
+      ],
+    };
+  },
+};
+</script>
 
 <style scoped>
 .menu {
@@ -70,36 +116,3 @@ pre {
   font-family: Work Sans;
 }
 </style>
-
-<script>
-import tabs from "./tabs";
-import tab from "./tab";
-
-export default {
-  name: "menu",
-  components: {
-    tabs,
-    tab,
-  },
-  data() {
-    return {
-      Specials: [
-        {
-          id: 1,
-          phrase: "Set the mood...",
-          name: "Chocholate Cake",
-          description:
-            "Mini lemony pancakes with cheese, swis andblossoms garnish"
-        },
-        {
-          id: 2,
-          phrase: "Set the mood...",
-          name: "Chocholate Cake",
-          description:
-            "Mini lemony pancakes with cheese, swis andblossoms garnish"
-        },
-      ],
-    };
-  },
-};
-</script>

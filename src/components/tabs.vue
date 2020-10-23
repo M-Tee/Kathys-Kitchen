@@ -4,11 +4,11 @@
     <div class="tabs menuNav">
       <ul>
         <li
-          v-for="tab in tabs"
-          :key="tab"
-          :class="{ 'is-active': tab.isActive }"
+          v-for="menuSection in menuSections"
+          :key="menuSection.route"
+          :class="{ 'is-active': $route.name === menuSection.route }"
         >
-          <a :href="tab.href" @click="selectTab(tab)">{{ tab.name }}</a>
+          <router-link :to="{name: menuSection.route}">{{ menuSection.name }}</router-link>
         </li>
       </ul>
     </div>
@@ -18,6 +18,40 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    menuSections: {
+      type: Array,
+      required: true,
+      validator: value => {
+        /*
+          Just making sure that this prop is an array of objects with string name and string route parameters
+        */
+        return !value.some(item => {
+          return typeof item !== 'object' ||
+                  typeof item.name !== 'string' ||
+                  typeof item.route !== 'string'
+        })
+      }
+    }
+  },
+  data() {
+    return { tabs: [] };
+  },
+  created() {
+    this.tabs = this.$children;
+  },
+  methods: {
+    selectTab(selectedTab) {
+      this.tabs.forEach((tab) => {
+        tab.isActive = tab.name == selectedTab.name;
+      });
+    },
+  },
+};
+</script>
 
 <style scoped>
 .heading {
@@ -49,22 +83,3 @@ ul li {
   display: inline-block;
 }
 </style>
-
-<script>
-export default {
-  data() {
-    return { tabs: [] };
-  },
-
-  created() {
-    this.tabs = this.$children;
-  },
-  methods: {
-    selectTab(selectedTab) {
-      this.tabs.forEach((tab) => {
-        tab.isActive = tab.name == selectedTab.name;
-      });
-    },
-  },
-};
-</script>
