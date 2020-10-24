@@ -15,14 +15,12 @@
 
     <div class="tabs-details">
       <tab name="Chef's Special" :selected="true">
-        <div  class="menuContent">
-          <scard :key="content.id" v-for="content in Specials" :content="content" class="card"></scard>
-        </div>
+        <chefSpecial/>
       </tab>
 
       <tab name="Main course">
         <div class="menuContent">
-          <h1>This is the main Menu</h1>
+          <mainCourse> </mainCourse>
         </div>
       </tab>
 
@@ -34,6 +32,39 @@
     </div>
   </div>
 </template>
+
+<script>
+import tab from "./tab";
+import chefSpecial from "./chefSpecial";
+import mainCourse from "./mainCourse";
+
+
+export default {
+  name: "tabs",
+  components: {
+    tab,
+    chefSpecial,
+    mainCourse,
+  },
+  data() {
+    return {
+      tabs: [],
+     
+    };
+  },
+
+  created() {
+    this.tabs = this.$children;
+  },
+  methods: {
+    selectTab(selectedTab) {
+      this.tabs.forEach((tab) => {
+        tab.isActive = tab.name == selectedTab.name;
+      });
+    },
+  },
+};
+</script>
 
 <style scoped>
 .heading {
@@ -68,92 +99,6 @@ ul li {
   text-align: center;
   padding: 30px;
 }
-.menuContent {
-  text-align: left;
-  background-color: #f1f6f7;
-  margin: 13px 100px;
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
-  border-radius: 20px;
-  display: flex;
-}
-.card{
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-.menuContent :nth-child(2){
-    flex-direction: column-reverse;
-}
 
 
 </style>
-
-<script>
-import tab from "./tab";
-import scard from "./sCard";
-
-export default {
-  name: "tabs",
-  components: {
-    tab,
-    scard,
-  },
-  data() {
-    return {
-      tabs: [
-        {
-          id: 1,
-          name: "Chef's Special",
-          selected: true,
-        },
-        {
-          id: 2,
-          name: "Main Course",
-        },
-        {
-          id: 3,
-          name: "Cake Desserts",
-        },
-      ],
-      Specials: [
-        {
-          id: 1,
-          image: require("../assets/miniPancakes.png"),
-          phrase: "Set the mood...",
-          name: "Mini Pancakes",
-          description:
-            "Mini lemony pancakes with cheese, swis andblossoms garnish",
-        },
-        
-        {
-          id: 2,
-          image: require("../assets/PastaImage.png"),
-          phrase: "Dig In...",
-          name: "Italian Pasta",
-          description:
-            "Mini lemony pancakes with cheese, swis andblossoms garnish",
-        },
-        {
-          id: 3,
-          image: require("../assets/cakeImage.png"),
-          phrase: "Wrap Up...",
-          name: "Chocholate Cake",
-          description:
-            "Mini lemony pancakes with cheese, swis andblossoms garnish",
-        },
-      ],
-    };
-  },
-
-  created() {
-    this.tabs = this.$children;
-  },
-  methods: {
-    selectTab(selectedTab) {
-      this.tabs.forEach((tab) => {
-        tab.isActive = tab.name == selectedTab.name;
-      });
-    },
-  },
-};
-</script>
