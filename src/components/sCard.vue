@@ -25,6 +25,7 @@ export default {
   padding: 100px 30px;
   text-align: center;
   flex: 2;
+  font-size: 1.4vw;
 }
 img,
 .details{
@@ -35,7 +36,7 @@ img,
   font-weight: 300;
 }
 .name {
-  font-size: 30px;
+  font-size: 2.0vw;
   color: #d36200;
   font-weight: 600;
   margin: 20px 0;
