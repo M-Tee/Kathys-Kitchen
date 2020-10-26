@@ -1,0 +1,91 @@
+<template>
+  <div>
+    <h2 class="heading">About</h2>
+    <div class="aboutInfo">
+      <img src="../assets/KathyS.jpg" alt="" />
+      
+      <div class="bioData">
+         <div class="bio">
+        Hi, I’m Kathy Neil, a personal chef, with 5 years of experince in the
+        food industry. Part of being a great personal chef comes with
+        understanding and working around peoples tastes. I’d be happy to share
+        some tips and tricks to get you up and rolling in the industry.
+      </div>
+      <label for="input">
+<input type="text" placeholder="janedoe@gmail.com" name="input"/>
+        <Button> Tip me </Button>
+      </label>
+        
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import Button from "./button";
+
+export default {
+  name: "about",
+  components: {
+    Button,
+  },
+};
+</script>
+
+<style scoped>
+.heading {
+  margin: 30px 0 20px;
+  font-family: "Tillana", cursive;
+  font-size: 2.5vw;
+  color: #d36200;
+  text-align: center;
+}
+
+.aboutInfo {
+  margin: 13px 100px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  display: flex;
+  font-size: 1.4vw;
+
+}
+img {
+  border-radius: 20px 0 0 20px;
+  flex: 1;
+  
+  
+}
+.bioData {
+  white-space: normal;
+  flex: 1;
+  padding: 50px 30px;
+  line-height: 2;
+  margin: auto;;
+}
+label {
+  margin-top: 50px;
+  border-radius: 50px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+  padding: 6px 0 0 15px ;
+  width: 90%;
+  display: inline-block;
+}
+input {
+  border: none;
+  background-color: #f1f6f7;
+  color: rgba(0, 0, 0, 0.7);
+  width: unset;
+}
+input::placeholder {
+ color: rgba(0, 0, 0, 0.43);
+}
+Button {
+  float: right;
+}
+
+@media only screen and (max-width: 600px) {
+ .aboutInfo {
+  margin: 13px 50px;
+ }
+}
+</style>
