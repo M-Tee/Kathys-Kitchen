@@ -26,7 +26,7 @@
 
       <tab name="Cake Deserts">
         <div class="menuContent">
-          <h1>This are desserts</h1>
+          <cakeDeserts/>
         </div>
       </tab>
     </div>
@@ -37,6 +37,7 @@
 import tab from "./tab";
 import chefSpecial from "./chefSpecial";
 import mainCourse from "./mainCourse";
+import cakeDeserts from "./CakeDesserts"
 
 
 export default {
@@ -45,6 +46,7 @@ export default {
     tab,
     chefSpecial,
     mainCourse,
+    cakeDeserts
   },
   data() {
     return {
@@ -68,7 +70,7 @@ export default {
 
 <style scoped>
 .heading {
-  margin-bottom: 20px;
+  margin: 30px 0 20px;
   font-family: "Tillana", cursive;
   font-size: 2.5vw;
   color: #d36200;
@@ -97,7 +99,6 @@ ul li {
 }
 .menu {
   text-align: center;
-  padding: 30px;
 }
 
 

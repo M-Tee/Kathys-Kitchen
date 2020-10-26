@@ -27,7 +27,7 @@ export default {
   text-align: left;
 }
 .details{
-  padding: 30px 20px;
+  padding: 25px 20px;
 }
 #name{
   color: #d36200;

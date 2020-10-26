@@ -60,5 +60,6 @@ export default {
 }
 .menuContent :nth-child(2){
     flex-direction: column-reverse;
+    margin-top: -1px;
 }
 </style>

@@ -12,19 +12,22 @@
       <router-view />
       <Home> </Home>
     </div>
-    <Menu></Menu>
+    <Menu/>
+    <About/>
   </div>
 </template>
 
 <script>
 import Home from "./components/Home";
 import Menu from "./components/Menu";
+import About from "./components/About";
 
 export default {
   name: "app",
   components: {
     Home,
     Menu,
+    About
   },
   
   
