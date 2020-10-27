@@ -1,19 +1,22 @@
 
 <template>
   <div id="app">
-    <div class="backgroundImg">
+    <div class="backgroundImg" id="home">
       <div id="nav">
-        <router-link to="/">Home</router-link>
+        <!-- <router-link to="#home">Home</router-link>
         <router-link to="">Menu</router-link>
         <router-link to="">Order</router-link>
-        <router-link to="">About</router-link>
-        <!-- <router-link to="/about">About</router-link> -->
+        <router-link to="">About</router-link> -->
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#menu">Pricing</a>
+        <a href="#about">About</a>
       </div>
-      <router-view />
+      <!-- <router-view /> -->
       <Home> </Home>
     </div>
-    <Menu/>
-    <About/>
+    <Menu id="menu"/>
+    <About id="about"/>
   </div>
 </template>
 
