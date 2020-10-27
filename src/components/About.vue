@@ -1,8 +1,8 @@
 <template>
   <div>
     <h2 class="heading">About</h2>
-    <div class="aboutInfo">
-      <img src="../assets/KathyS.jpg" alt="" />
+    <container>
+       <img src="../assets/KathyS.jpg" alt="" />
       
       <div class="bioData">
          <div class="bio">
@@ -17,16 +17,19 @@
       </label>
         
       </div>
-    </div>
+       </container>
+
   </div>
 </template>
 
 <script>
+import container from "./container";
 import Button from "./button";
 
 export default {
   name: "about",
   components: {
+    container,
     Button,
   },
 };
@@ -41,25 +44,15 @@ export default {
   text-align: center;
 }
 
-.aboutInfo {
-  margin: 13px 100px;
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
-  border-radius: 20px;
-  display: flex;
-  font-size: 1.4vw;
-
-}
 img {
   border-radius: 20px 0 0 20px;
   flex: 1;
-  
-  
 }
+
 .bioData {
   white-space: normal;
   flex: 1;
   padding: 50px 30px;
-  line-height: 2;
   margin: auto;;
 }
 label {

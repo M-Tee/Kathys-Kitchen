@@ -1,20 +1,27 @@
 <template>
-  <div  class="menuContent">
-    <scard :key="content.id" v-for="content in Specials" :content="content" class="card"></scard>
-  </div>
+  <container class="menuContent">
+    <scard
+      :key="content.id"
+      v-for="content in Specials"
+      :content="content"
+      class="card"
+    ></scard>
+  </container>
 </template>
 
 <script>
+import container from "./container";
 import scard from "./sCard";
 
 export default {
   name: "chefspecial",
-  components: { 
-   scard,
-    },
+  components: {
+    container,
+    scard,
+  },
   data() {
     return {
-       Specials: [
+      Specials: [
         {
           id: 1,
           image: require("../assets/miniPancakes.png"),
@@ -40,26 +47,19 @@ export default {
             "Mini lemony pancakes with cheese, swis andblossoms garnish",
         },
       ],
-    }
-  }
-}
+    };
+  },
+};
 </script>
 
 <style scoped>
-.menuContent {
-  background-color: #f1f6f7;
-  margin: 13px 100px;
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
-  border-radius: 20px;
-  display: flex;
-}
-.card{
+.card {
   margin: 0;
   display: flex;
   flex-direction: column;
 }
-.menuContent :nth-child(2){
-    flex-direction: column-reverse;
-    margin-top: -1px;
+.menuContent :nth-child(2) {
+  flex-direction: column-reverse;
+  margin-top: -1px;
 }
 </style>
