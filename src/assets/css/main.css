@@ -1,0 +1,11 @@
+.heading {
+  font-size: 2em;
+    margin: 30px 0 20px;
+    font-family: "Tillana", cursive;
+    color: #d36200;
+    text-align: center;
+}
+
+p {
+  font-size: 1em;
+}
