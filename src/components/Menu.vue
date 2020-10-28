@@ -69,12 +69,7 @@ export default {
 </script>
 
 <style scoped>
-.heading {
-  margin: 30px 0 20px;
-  font-family: "Tillana", cursive;
-  font-size: 2.5vw;
-  color: #d36200;
-}
+
 .menuNav {
   margin-bottom: 30px;
 }
@@ -84,7 +79,7 @@ export default {
   color: rgba(0, 0, 0, 0.7);
   margin: 0 30px;
   letter-spacing: 0.2em;
-  font-size: 1.4vw;
+  font-size: 1em;
 }
 
 .menuNav a:hover,

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="heading">About</h2>
-    <container>
+    <container id="flexcard">
        <img src="../assets/KathyS.jpg" alt="" />
       
       <div class="bioData">
@@ -17,7 +17,7 @@
       </label>
         
       </div>
-       </container>
+    </container>
 
   </div>
 </template>
@@ -36,17 +36,15 @@ export default {
 </script>
 
 <style scoped>
-.heading {
-  margin: 30px 0 20px;
-  font-family: "Tillana", cursive;
-  font-size: 2.5vw;
-  color: #d36200;
-  text-align: center;
+#flexcard{
+  display: flex;
 }
+
 
 img {
   border-radius: 20px 0 0 20px;
   flex: 1;
+  width: 100%;
 }
 
 .bioData {
@@ -75,10 +73,22 @@ input::placeholder {
 Button {
   float: right;
 }
+@media only screen and (max-width: 768px) {
+ #flexcard {
+    flex-direction: column;
+  }
+   img{
+    border-radius: 20px 20px 0 0;
+ }
+}
 
 @media only screen and (max-width: 600px) {
+ 
  .aboutInfo {
   margin: 13px 50px;
  }
+
+
 }
+
 </style>
