@@ -58,8 +58,17 @@ export default {
   display: flex;
   flex-direction: column;
 }
+.menuContent{
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+}
 .menuContent :nth-child(2) {
   flex-direction: column-reverse;
   margin-top: -1px;
+}
+
+@media only screen and (max-width: 768px) {
+  .menuContent :nth-child(2) { 
+    flex-direction: column;
+  }
 }
 </style>
