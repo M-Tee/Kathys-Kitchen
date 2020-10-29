@@ -14,13 +14,18 @@ export default {
 <style scoped>
 .container{
   background-color: #f1f6f7;
-  margin: 13px 100px;
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+  margin: 13px 7em;
   border-radius: 20px;
   display: flex;
   font-size: 1.4vw;
-  line-height: 1.5;
-
 }
+
+@media only screen and (max-width: 600px) {
+ .container {
+    flex-direction: column;
+  }
+ 
+}
+
 
 </style>
