@@ -6,7 +6,8 @@
       
       <div class="bioData">
          <div class="bio">
-        Hi, I’m Kathy Neil, a personal chef, with 5 years of experince in the
+         
+        Hi! I’m <strong>Kathy Neil</strong>, a <i>personal chef</i> , with 5 years of experince in the
         food industry. Part of being a great personal chef comes with
         understanding and working around peoples tastes. I’d be happy to share
         some tips and tricks to get you up and rolling in the industry.
@@ -37,12 +38,11 @@ export default {
 
 <style scoped>
 #flexcard{
-  display: flex;
+  line-height: 2;
 }
 
-
 img {
-  border-radius: 20px 0 0 20px;
+  border-radius: 20px;
   flex: 1;
   width: 100%;
 }
@@ -50,40 +50,47 @@ img {
 .bioData {
   white-space: normal;
   flex: 1;
-  padding: 50px 30px;
-  margin: auto;;
+  padding: 4em;
+  margin: auto;
 }
 label {
-  margin-top: 50px;
+  margin-top: 2em;
   border-radius: 50px;
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
-  padding: 6px 0 0 15px ;
+  padding-left: 20px ;
   width: 90%;
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
 }
 input {
   border: none;
   background-color: #f1f6f7;
   color: rgba(0, 0, 0, 0.7);
   width: unset;
+  font-size: 0.8em;
 }
 input::placeholder {
  color: rgba(0, 0, 0, 0.43);
 }
-Button {
-  float: right;
+
+
+strong {
+  color: #d36200;
+  font-size: 1.3em;
+  font-weight: bold;
 }
 @media only screen and (max-width: 768px) {
- #flexcard {
-    flex-direction: column;
-  }
-   img{
-    border-radius: 20px 20px 0 0;
- }
+ 
 }
 
 @media only screen and (max-width: 600px) {
- 
+ #flexcard {
+    flex-direction: column;
+  }
+  .bioData{
+    padding: 4em 0;
+  }
+   
  .aboutInfo {
   margin: 13px 50px;
  }
