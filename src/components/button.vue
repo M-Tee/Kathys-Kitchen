@@ -10,7 +10,8 @@
   background-color: #D36200;
   border: none;
   border-radius: 50px;
-  padding: 15px 30px;
+  padding: 15px 20px;
+  font-size: 0.8em;
 }
 
 </style>
