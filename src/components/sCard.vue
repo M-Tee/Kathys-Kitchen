@@ -20,16 +20,17 @@ export default {
 </script>
 
 <style scoped> 
+img {
+  width: 100%;
+}
 
 .details {
-  padding: 100px 30px;
+  /* padding: 7em 30px 10px; */
   text-align: center;
-  flex: 2;
-  font-size: 1.4vw;
 }
 img,
 .details{
-  /* flex: 1; */
+  flex: 1;
 }
 .storyline {
   font-family: "Tillana", cursive;
