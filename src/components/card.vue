@@ -36,12 +36,10 @@ img {
   color: #d36200;
   margin-bottom: 7px;
   font-weight: normal;
-  font-size: 1.8vw;
+  font-size: 1.3em;
 }
 #descrip{
   font-weight: lighter;
-  font-size: 1.4vw;
-
 }
 @media only screen and (max-width: 768px) {
 
@@ -49,6 +47,6 @@ img {
 @media only screen and (max-width: 600px) { 
 .card{
   flex-basis: 100%;
-}
+  }
 }
 </style>
