@@ -60,8 +60,6 @@ export default {
 .container{
   display: flex;
   flex-wrap: wrap;
-  margin: 13px 100px;
 justify-content: center;
-  
 }
 </style>
