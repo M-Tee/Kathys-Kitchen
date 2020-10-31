@@ -15,19 +15,15 @@
 
     <div class="tabs-details">
       <tab name="Chef's Special" :selected="true">
-        <chefSpecial/>
+        <chefSpecial />
       </tab>
 
       <tab name="Main course">
-        <div class="menuContent">
-          <mainCourse> </mainCourse>
-        </div>
+        <mainCourse />
       </tab>
 
       <tab name="Cake Deserts">
-        <div class="menuContent">
-          <cakeDeserts/>
-        </div>
+        <cakeDeserts />
       </tab>
     </div>
   </div>
@@ -37,8 +33,7 @@
 import tab from "./tab";
 import chefSpecial from "./chefSpecial";
 import mainCourse from "./mainCourse";
-import cakeDeserts from "./CakeDesserts"
-
+import cakeDeserts from "./CakeDesserts";
 
 export default {
   name: "tabs",
@@ -46,12 +41,11 @@ export default {
     tab,
     chefSpecial,
     mainCourse,
-    cakeDeserts
+    cakeDeserts,
   },
   data() {
     return {
       tabs: [],
-     
     };
   },
 
@@ -69,7 +63,6 @@ export default {
 </script>
 
 <style scoped>
-
 .menuNav {
   margin-bottom: 30px;
 }
@@ -95,6 +88,4 @@ ul li {
 .menu {
   text-align: center;
 }
-
-
 </style>
