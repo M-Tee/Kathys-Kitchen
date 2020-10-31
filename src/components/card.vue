@@ -26,6 +26,9 @@ export default {
   border-radius: 20px;
   text-align: left;
 }
+img {
+  width: 100%;
+}
 .details{
   padding: 25px 20px;
 }
@@ -39,5 +42,13 @@ export default {
   font-weight: lighter;
   font-size: 1.4vw;
 
+}
+@media only screen and (max-width: 768px) {
+
+}
+@media only screen and (max-width: 600px) { 
+.card{
+  flex-basis: 100%;
+}
 }
 </style>
