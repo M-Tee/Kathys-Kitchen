@@ -20,8 +20,7 @@ export default {
 .card{
   flex-basis: 25%;
   background-color: #f1f6f7;
-  margin: 0 20px 40px;
-  /* padding: 20px; */
+  margin: 0 30px 60px;
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   text-align: left;

@@ -15,8 +15,11 @@
       <!-- <router-view /> -->
       <Home> </Home>
     </div>
-    <Menu id="menu"/>
-    <About id="about"/>
+    <div id="margin">
+      <Menu id="menu" />
+      <Services id="services" />
+      <About id="about" />
+    </div>
   </div>
 </template>
 
@@ -24,16 +27,16 @@
 import Home from "./components/Home";
 import Menu from "./components/Menu";
 import About from "./components/About";
+import Services from "./components/Services";
 
 export default {
   name: "app",
   components: {
     Home,
     Menu,
-    About
+    About,
+    Services,
   },
-  
-  
 };
 </script>
 
@@ -46,11 +49,9 @@ export default {
 }
 
 #app {
-  font-family: "Work Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* text-align: center; */
-  color: rgba(0, 0, 0, 0.7);
   background: #f1f6f7;
 }
 
@@ -73,7 +74,7 @@ export default {
   padding-top: 70px;
   margin-right: 70px;
   font-weight: 400;
-  font-size: 1.4vw;
+  font-size: 1em;
   line-height: 28px;
   letter-spacing: 0.2em;
 }
@@ -90,7 +91,9 @@ export default {
 #nav a.router-link-exact-active {
   /* color: #D36200; */
 }
-
+#margin {
+  margin: 13px 6em;
+}
 /* Media Queries */
 @media only screen and (max-width: 768px) {
   .backgroundImg {
@@ -100,6 +103,15 @@ export default {
 @media only screen and (max-width: 600px) {
   #nav {
     margin-right: 25px;
+  }
+}
+
+#services {
+  background: rgba(225, 236, 242, 0.59);
+}
+@media only screen and (max-width: 768px) {
+  #nav {
+    font-size: 0.8rem;
   }
 }
 
