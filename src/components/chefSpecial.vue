@@ -4,7 +4,6 @@
       :key="content.id"
       v-for="content in Specials"
       :content="content"
-      class="card"
     ></scard>
   </div>
 </template>
@@ -51,22 +50,18 @@ export default {
 </script>
 
 <style scoped>
-
-.card {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-.menuContent{
+.menuContent {
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
 }
 .menuContent :nth-child(2) {
   flex-direction: column-reverse;
-  margin-top: -1px;
 }
 
 @media only screen and (max-width: 600px) {
-  .menuContent :nth-child(2) { 
+  .menuContent {
+    box-shadow: unset;
+  }
+  .menuContent :nth-child(2) {
     flex-direction: column;
   }
 }
