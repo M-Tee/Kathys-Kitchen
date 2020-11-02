@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="heading">About</h2>
-    <container id="flexcard">
+    <div class="container" id="flexcard">
        <img src="../assets/KathyS.jpg" alt="" />
       
       <div class="bioData">
@@ -18,19 +18,17 @@
       </label>
         
       </div>
-    </container>
+    </div>
 
   </div>
 </template>
 
 <script>
-import container from "./container";
 import Button from "./button";
 
 export default {
   name: "about",
   components: {
-    container,
     Button,
   },
 };

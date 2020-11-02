@@ -11,8 +11,17 @@
     color: #d36200;
     text-align: center;
 }
+.container{
+  background-color: #f1f6f7;
+  border-radius: 20px;
+  display: flex;
+  font-size: 1.4vw;
+}
 @media only screen and (max-width: 600px) {
   * {
     font-size: 11px;
   }
+  .container {
+    flex-direction: column;
+  } 
 }

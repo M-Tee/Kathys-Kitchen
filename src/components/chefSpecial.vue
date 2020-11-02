@@ -1,22 +1,20 @@
 <template>
-  <container class="menuContent">
+  <div class="container menuContent">
     <scard
       :key="content.id"
       v-for="content in Specials"
       :content="content"
       class="card"
     ></scard>
-  </container>
+  </div>
 </template>
 
 <script>
-import container from "./container";
 import scard from "./sCard";
 
 export default {
   name: "chefspecial",
   components: {
-    container,
     scard,
   },
   data() {
@@ -53,6 +51,7 @@ export default {
 </script>
 
 <style scoped>
+
 .card {
   margin: 0;
   display: flex;
@@ -66,7 +65,7 @@ export default {
   margin-top: -1px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   .menuContent :nth-child(2) { 
     flex-direction: column;
   }
