@@ -15,11 +15,9 @@
       <!-- <router-view /> -->
       <Home> </Home>
     </div>
-    <div id="margin">
-      <Menu id="menu" />
-      <Services id="services" />
-      <About id="about" />
-    </div>
+    <Menu id="menu" class="margin"/>
+    <Services id="services" />
+    <About id="about" class="margin" />
   </div>
 </template>
 
@@ -51,7 +49,6 @@ export default {
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
   background: #f1f6f7;
 }
 
@@ -59,7 +56,6 @@ export default {
   background-image: url("./assets/edited-brooke-lark-08boynh_r_e.jpg");
   background-repeat: no-repeat;
   background-position: center top;
-
   background-size: cover;
   margin-top: 0px;
   /* position: absolute;
@@ -91,8 +87,11 @@ export default {
 #nav a.router-link-exact-active {
   /* color: #D36200; */
 }
-#margin {
-  margin: 13px 6em;
+
+
+#services {
+  background: rgba(225, 236, 242, 0.59);
+  margin: 0;
 }
 /* Media Queries */
 @media only screen and (max-width: 768px) {
@@ -106,9 +105,7 @@ export default {
   }
 }
 
-#services {
-  background: rgba(225, 236, 242, 0.59);
-}
+
 @media only screen and (max-width: 768px) {
   #nav {
     font-size: 0.8rem;
