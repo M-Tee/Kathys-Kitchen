@@ -15,9 +15,10 @@
       <!-- <router-view /> -->
       <Home> </Home>
     </div>
-    <Menu id="menu" class="margin"/>
+    <Menu id="menu"/>
     <Services id="services" />
     <About id="about" class="margin" />
+    <Footer id="footer" />
   </div>
 </template>
 
@@ -26,6 +27,7 @@ import Home from "./components/Home";
 import Menu from "./components/Menu";
 import About from "./components/About";
 import Services from "./components/Services";
+import Footer from "./components/footer";
 
 export default {
   name: "app",
@@ -34,12 +36,12 @@ export default {
     Menu,
     About,
     Services,
+    Footer,
   },
 };
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Tillana:wght@600;800&family=Work+Sans:wght@400;500;600&display=swap");
 
 * {
   padding: 0;
@@ -50,6 +52,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #f1f6f7;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .backgroundImg {
@@ -92,6 +95,13 @@ export default {
 #services {
   background: rgba(225, 236, 242, 0.59);
   margin: 0;
+}
+
+#menu,
+#about,
+#services {
+  padding-top: 30px;
+  padding-bottom: 90px;
 }
 /* Media Queries */
 @media only screen and (max-width: 768px) {
