@@ -25,7 +25,7 @@ export default {
 <style scoped>
 footer {
   background-color: rgba(0, 0, 0, 0.7);
-  color: #f1f6f7 !important;
+  color: rgba(241, 246, 247, 0.76) !important;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
