@@ -1,6 +1,6 @@
 <template>
    <div class="container margin">
-      <img src="../assets/KathyS.jpg" alt="" />
+      <img :src= "require('../assets/' + service.image)" alt="" />
       <div class="service">
         <h4 class="name"> {{service.name}} </h4>
         <div class="description"> {{service.description}} </div>
@@ -16,9 +16,13 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  justify-content: space-between;
+  align-content: space-around;
+}
 img {
   border-radius: 20px;
-  width: 10%;
+  height: 50vh;
 }
 .name{
   color: #d36200;
@@ -32,7 +36,8 @@ img,
 }
 .service {
   white-space: normal;
-  padding: 4em;
+  /* padding: 4em; */
+  margin: 30px;
   margin: auto;
 }
 
