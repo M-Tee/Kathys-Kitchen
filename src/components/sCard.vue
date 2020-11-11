@@ -23,17 +23,26 @@ export default {
   margin: 0;
   display: flex;
   flex-direction: column;
+  /* box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+  clip-path: inset(0px -15px 0px -15px);
+  position: relative;
+ */
 }
+
+
 img {
   width: 100%;
-  flex: 1;
+  height: 40vh;
 }
 
 .details {
   text-align: center;
+  height: 31vh;
   padding: 1em;
-  /* padding: 6em 1em; */
-  flex: 4;
+  display: flex;
+  flex-direction: column !important;
+  justify-content: center;
+  align-items: center;
 }
 
 .storyline {

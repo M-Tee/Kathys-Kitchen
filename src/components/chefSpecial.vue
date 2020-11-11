@@ -1,5 +1,5 @@
 <template>
-  <div class="container menuContent">
+  <div class="container margin menuContent">
     <scard
       :key="content.id"
       v-for="content in Specials"
@@ -62,7 +62,10 @@ export default {
     box-shadow: unset;
   }
   .menuContent :nth-child(2) {
-    flex-direction: column;
+    /* flex-direction: column; */
+  }
+  .container {
+    flex-direction: row;
   }
 }
 </style>
