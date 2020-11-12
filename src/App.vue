@@ -26,6 +26,7 @@ import Home from "./components/Home";
 import Footer from "./components/footer";
 
 export default {
+  components: { Button },
   name: "app",
   components: {
     Home,
@@ -126,4 +127,42 @@ export default {
     display: none;
   }
 }
+
+.home {
+    text-align: right;
+    margin-right: 70px;
+  }
+  .brandName {
+    font-family: "Tillana", cursive;
+    font-size: 5.1vw;
+    color: #d36200;
+    padding-top: 150px;
+  }
+  .catchphrase {
+    margin: 20px 0;
+    font-size: 2.3vw;
+    font-weight: 500;
+    line-height: 42px;
+  }
+  .menuBtn {
+    margin: 30px 0 100px;
+    font-size: 1.8vw;
+  }
+
+  @media screen and (max-width: 768px) {
+    .brandName {
+    font-size: 30px;
+    }
+    .catchphrase{
+      font-size: 14px;
+    }
+    .menuBtn{
+      font-size: 11px;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .home {
+    margin-right: 25px;
+    }
+  }
 </style>
