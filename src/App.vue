@@ -3,12 +3,12 @@
   <div id="app">
     <div class="backgroundImg" id="home">
       <div id="nav">
-        <router-link to="/home">Home</router-link>
+        <!-- <router-link to="/home">Home</router-link> -->
         <router-link to="/menu">Menu</router-link>
         <router-link to="/services">Service</router-link>
         <router-link to="/about">About</router-link>
       </div>
-      <Home> </Home>
+      <!-- <Home> </Home> -->
     </div>
       <router-view />
     <!-- <Menu id="menu"/>
@@ -19,17 +19,16 @@
 </template>
 
 <script>
-import Home from "./components/Home";
+// import Home from "./components/Home";
 // import Menu from "./components/Menu";
 // import About from "./components/About";
 // import Services from "./components/Services";
 import Footer from "./components/footer";
 
 export default {
-  components: { Button },
   name: "app",
   components: {
-    Home,
+    // Home,
     // Menu,
     // About,
     // Services,

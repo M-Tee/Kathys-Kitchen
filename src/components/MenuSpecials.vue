@@ -1,75 +1,71 @@
 <template>
-  <div class="menuContent">
-    <div class="card" v-for="special of specials" :key="special.id">
-      <img :src="require('@/assets/' + special.imgSrc)" alt="">
-      <div class="details">
-        <p class="storyline"> {{ special.phrase }} </p>
-        <h3 class="name"> {{ special.name }} </h3>
-        <p class="description"> 
-          <pre>
-              {{ special.description }}
-          </pre>
-          </p>
-      </div>
-    </div>
+  <div class="container margin menuContent">
+    <scard
+      :key="content.id"
+      v-for="content in Specials"
+      :content="content"
+    ></scard>
   </div>
 </template>
 
 <script>
+import scard from "./sCard";
 
 export default {
-  data: () => ({
-    publicPath: process.env.BASE_URL,
-    specials: [
-      {
-        id: 1,
-        phrase: "Set the mood...",
-        name: "Chocholate Cake",
-        description:
-          "Mini lemony pancakes with cheese, swis andblossoms garnish",
-        imgSrc: "Image1(1)chef'sSpecial.png"
-      },
-      {
-        id: 2,
-        phrase: "Set the mood...",
-        name: "Chocholate Cake",
-        description:
-          "Mini lemony pancakes with cheese, swis andblossoms garnish",
-        imgSrc: "Image1(1)chef'sSpecial.png"
-      },
-    ]
-  })
-}
+  name: "chefspecial",
+  components: {
+    scard,
+  },
+  data() {
+    return {
+      Specials: [
+        {
+          id: 1,
+          image: require("../assets/miniPancakes.png"),
+          phrase: "Set the mood...",
+          name: "Mini Pancakes",
+          description:
+            "Mini lemony pancakes with cheese, swis andblossoms garnish",
+        },
+        {
+          id: 2,
+          image: require("../assets/PastaImage.png"),
+          phrase: "Dig In...",
+          name: "Italian Pasta",
+          description:
+            "Mini lemony pancakes with cheese, swis andblossoms garnish",
+        },
+        {
+          id: 3,
+          image: require("../assets/cakeImage.png"),
+          phrase: "Wrap Up...",
+          name: "Chocholate Cake",
+          description:
+            "Mini lemony pancakes with cheese, swis andblossoms garnish",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style scoped>
 .menuContent {
-  text-align: left;
-  background-color: #f1f6f7;
-  margin: 13px 100px;
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
-  border-radius: 20px;
-  /* border: 1px solid black; */
-  display: flex;
 }
-.details {
-  padding: 100px 10px;
-  text-align: right;
+.menuContent :nth-child(2) {
+  flex-direction: column-reverse;
 }
-.storyline {
-  font-family: "Tillana", cursive;
-  font-weight: 300;
-}
-.name {
-  font-size: 30px;
-  color: #d36200;
-  font-weight: 600;
-  margin: 20px;
-}
-.description {
-  font-weight: lighter;
-}
-pre {
-  font-family: Work Sans;
+
+@media only screen and (max-width: 600px) {
+  .menuContent {
+    box-shadow: unset;
+  }
+  .menuContent :nth-child(2) {
+    /* flex-direction: column; */
+  }
+  .container {
+    flex-direction: row;
+  }
 }
 </style>

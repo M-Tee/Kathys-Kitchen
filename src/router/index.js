@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+// import Home from '../views/Home.vue'
 import Menu from "../components/menu.vue";
 import About from "../components/About.vue";
 import Services from '../components/Services.vue'
@@ -35,11 +35,6 @@ const routes = [
         component: MenuCakeDesserts
       }
     ]
-  },
-  {
-    path: '/order',
-    name: 'order',
-    component: Order
   },
   {
     path: '/menu',
