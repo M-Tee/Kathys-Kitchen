@@ -1,5 +1,6 @@
 <template>
 <footer>
+    <Navbar id="nav"/>
   <div class="icons">
     <img src="../assets/icons/loactionMarker.svg" alt="Location Marker">
     <img src="../assets/icons/Insta.svg" alt="Instagram">
@@ -14,12 +15,15 @@
 </template>
 
 <script>
+import Navbar from "./Nav";
 export default {
-  name: "footer"
+  name: "footer",
+  components: { Navbar }
 }
 </script>
 
 <style scoped>
+
 footer {
   background-color: #171717;
   color: #f1f6f7c2 !important;
@@ -29,7 +33,10 @@ footer {
   justify-content: center;
   padding: 28px 0;
 }
-
+#nav{
+  padding: 20px 0;
+  color: unset;
+}
 footer img {
   margin: 0 40px;
 }

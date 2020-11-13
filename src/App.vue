@@ -2,13 +2,8 @@
 <template>
   <div id="app">
     <div class="backgroundImg" id="home">
-      <div id="nav">
-        <router-link to="#" v-scroll-to="'#element'" >Home</router-link>
-        <router-link to="#" v-scroll-to="'#menu'" >Menu</router-link>
-        <router-link to="#" v-scroll-to="'#services'" >Service</router-link>
-        <router-link to="#" v-scroll-to="'#about'" >About</router-link>
-      </div>
-      <Home> </Home>
+      <Navbar/>
+      <Home id="home"/>
     </div>
       <router-view />
     <Menu id="menu"/>
@@ -19,6 +14,7 @@
 </template>
 
 <script>
+import Navbar from "./components/Nav"
 import Home from "./components/Home";
 import Menu from "./components/Menu";
 import About from "./components/About";
@@ -28,6 +24,7 @@ import Footer from "./components/footer";
 export default {
   name: "app",
   components: {
+    Navbar,
     Home,
     Menu,
     About,
@@ -64,28 +61,6 @@ export default {
   height: 100vh; */
 }
 
-#nav {
-  text-align: right;
-  padding-top: 70px;
-  margin-right: 70px;
-  font-weight: 400;
-  font-size: 1em;
-  line-height: 28px;
-  letter-spacing: 0.2em;
-}
-
-#nav a {
-  color: #2c3e50;
-  text-decoration: none;
-  margin-left: 70px;
-}
-#nav a:hover {
-  color: #d36200;
-}
-
-#nav a.router-link-exact-active {
-  /* color: #D36200; */
-}
 
 
 #services {
