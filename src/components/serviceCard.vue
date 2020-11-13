@@ -1,5 +1,5 @@
 <template>
-   <div class="container margin">
+   <div class="card margin">
       <img :src= "require('../assets/' + service.image)" alt="" />
       <div class="service">
         <h4 class="name"> {{service.name}} </h4>
@@ -16,13 +16,21 @@ export default {
 </script>
 
 <style scoped>
+.card {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.4vw;
+}
 .container {
-  justify-content: space-between;
   align-content: space-around;
+  padding-bottom: 30px;
 }
 img {
   border-radius: 20px;
-  height: 50vh;
+  height: 40vh;
+  margin-right: 20px;
+  
 }
 .name{
   color: #d36200;
@@ -32,13 +40,12 @@ img {
 img,
 .service {
   flex: 1;
-
 }
 .service {
   white-space: normal;
-  /* padding: 4em; */
   margin: 30px;
-  margin: auto;
+  margin-top:  auto; 
+  margin-bottom: auto;
 }
 
 

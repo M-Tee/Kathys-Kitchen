@@ -2,8 +2,7 @@
   <div id="">
     <h2 class="heading">Service</h2>
     <div class="serviceCard">
-    <serviceCard :key="service.id" v-for=" service in services" :service="service" />
-
+    <serviceCard id="card" :key="service.id" v-for=" service in services" :service="service" />
     </div>
   </div>
 </template>
@@ -51,14 +50,13 @@ export default {
 <style scoped>
 .serviceCard :nth-child(1),
 .serviceCard :nth-child(3){
-  padding-left: unset;
+  /* padding-right: 50px; */
 }
 
 .serviceCard :nth-child(2),
 .serviceCard :nth-child(4){
   flex-direction: row-reverse;
-  text-align: left;
-  padding-right: unset;
 }
+
 
 </style>
