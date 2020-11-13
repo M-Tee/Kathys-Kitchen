@@ -3,35 +3,35 @@
   <div id="app">
     <div class="backgroundImg" id="home">
       <div id="nav">
-        <router-link to="/home">Home</router-link>
-        <router-link to="/menu">Menu</router-link>
-        <router-link to="/services">Service</router-link>
-        <router-link to="/about">About</router-link>
+        <router-link to="#" v-scroll-to="'#element'" >Home</router-link>
+        <router-link to="#" v-scroll-to="'#menu'" >Menu</router-link>
+        <router-link to="#" v-scroll-to="'#services'" >Service</router-link>
+        <router-link to="#" v-scroll-to="'#about'" >About</router-link>
       </div>
       <Home> </Home>
     </div>
       <router-view />
-    <!-- <Menu id="menu"/>
+    <Menu id="menu"/>
     <Services id="services" />
-    <About id="about" class="margin" /> -->
+    <About id="about" class="margin" />
     <Footer id="footer" />
   </div>
 </template>
 
 <script>
 import Home from "./components/Home";
-// import Menu from "./components/Menu";
-// import About from "./components/About";
-// import Services from "./components/Services";
+import Menu from "./components/Menu";
+import About from "./components/About";
+import Services from "./components/Services";
 import Footer from "./components/footer";
 
 export default {
   name: "app",
   components: {
     Home,
-    // Menu,
-    // About,
-    // Services,
+    Menu,
+    About,
+    Services,
     Footer,
   },
 };
