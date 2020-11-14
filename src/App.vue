@@ -80,25 +80,11 @@ export default {
     background-position: center;
   }
 }
-@media only screen and (max-width: 600px) {
-  #nav {
-    margin-right: 25px;
-  }
-}
 
-
-@media only screen and (max-width: 768px) {
-  #nav {
-    font-size: 0.8rem;
-  }
-}
 
 @media only screen and (max-width: 500px) {
   .backgroundImg {
     height: 60vh;
-  }
-  #nav {
-    display: none;
   }
 }
 </style>
