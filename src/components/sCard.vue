@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="Card">
     <img :src="content.image" alt="Image" />
     <div class="details">
       <p class="storyline">{{ content.phrase }}</p>
@@ -19,14 +19,10 @@ export default {
 </script>
 
 <style scoped>
-.card {
+.Card {
   margin: 0;
   display: flex;
   flex-direction: column;
-  /* box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
-  clip-path: inset(0px -15px 0px -15px);
-  position: relative;
- */
 }
 
 
@@ -65,7 +61,7 @@ img {
 }
 
 @media only screen and (max-width: 600px) {
-  .card {
+  .Card {
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
   }

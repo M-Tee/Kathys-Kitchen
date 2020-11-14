@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="con-tainer">
     <card v-for="meal in meals" :key="meal.id" :meal="meal"> </card>
   </div>
 </template>
@@ -57,7 +57,7 @@ export default {
 </script>
 
 <style scoped>
-.container{
+.con-tainer{
   display: flex;
   flex-wrap: wrap;
 justify-content: center;

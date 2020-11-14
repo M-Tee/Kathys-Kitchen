@@ -35,7 +35,6 @@ export default {
 </script>
 
 <style>
-
 * {
   padding: 0;
   margin: 0;
@@ -54,14 +53,7 @@ export default {
   background-position: center top;
   background-size: cover;
   margin-top: 0px;
-  /* position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100vh; */
 }
-
-
 
 #services {
   background: rgba(225, 236, 242, 0.59);
@@ -81,10 +73,10 @@ export default {
   }
 }
 
-
 @media only screen and (max-width: 500px) {
   .backgroundImg {
     height: 60vh;
   }
 }
+
 </style>

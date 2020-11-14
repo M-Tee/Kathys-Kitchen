@@ -14,7 +14,7 @@
   text-align: center;
 }
 
-.container {
+.con-tainer {
   /* background-color: #f1f6f7; */
   border-radius: 20px;
   display: flex;
@@ -28,7 +28,7 @@
   * {
     font-size: 11px;
   }
-  .container {
+  .con-tainer {
     flex-direction: column;
   }
 }

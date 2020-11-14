@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="heading">About</h2>
-    <div class="container" id="flexcard">
+    <div class="con-tainer" id="flexcard">
        <img src="../assets/KathyS.jpg" alt="" />
       
       <div class="bioData">

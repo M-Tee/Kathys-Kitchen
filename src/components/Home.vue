@@ -15,7 +15,7 @@
     font-family: "Tillana", cursive;
     font-size: 5.1vw;
     color: #d36200;
-    padding-top: 150px;
+    padding-top: 2.5em;
   }
   .catchphrase {
     margin: 20px 0;

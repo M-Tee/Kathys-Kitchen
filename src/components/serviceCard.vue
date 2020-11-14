@@ -21,8 +21,10 @@ export default {
   display: flex;
   flex-direction: row;
   font-size: 1.4vw;
+  background-color: unset;
+  border: none;
 }
-.container {
+.con-tainer {
   align-content: space-around;
   padding-bottom: 30px;
 }
